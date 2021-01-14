@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+$dark-grayish-blue: hsl(217, 19%, 35%);
+$dark-blue: hsl(214, 17%, 51%);
+$grayish-blue: hsl(212, 23%, 69%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+$font-size: 13px;
+$font-family: "Manrope";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h4 {
+  color: $dark-grayish-blue;
+}
+
+body {
+  font-family: $font-family, sans-serif;
+  font-size: $font-size;
+  color: $dark-blue;
+  height: 100vh;
+  overflow: hidden;
+  background: $light-grayish-blue;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  display: grid;
+  // grid-template-columns: 1fr;
+  grid-template-rows: 95% 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  width: 90%;
+  max-width: 800px;
+  height: 550px;
+  margin: 0 auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 40% 45% 15%;
+
+  .article-img {
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .article-body {
+    padding: 2.2rem 2rem;
+
+    h1 {
+      font-size: 17px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 13.8px;
+      line-height: 1.6;
+    }
+  }
+
+  .article-footer {
+    display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // display: grid;
+    // grid-template-columns: 75% 20%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    .credits {
+      display: flex;
+      align-items: center;
+
+      .credits-img {
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .credits-text {
+        margin-left: 1rem;
+
+        .name {
+          font-size: 14px;
+          font-weight: 700;
+          margin-bottom: 0.2rem;
+        }
+        .date {
+          color: $grayish-blue;
+        }
+      }
+    }
+
+    .share-icon {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: $light-grayish-blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
