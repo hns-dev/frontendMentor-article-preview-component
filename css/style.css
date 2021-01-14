@@ -56,8 +56,8 @@ article {
   height: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 40% 45% 15%;
-      grid-template-rows: 40% 45% 15%;
+  -ms-grid-rows: 40% 60%;
+      grid-template-rows: 40% 60%;
 }
 
 article .article-img {
@@ -92,7 +92,7 @@ article .article-footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 2rem;
+  margin-top: 2rem;
 }
 
 article .article-footer .credits {

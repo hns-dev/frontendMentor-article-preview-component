@@ -28,12 +28,7 @@ body {
   height: 100vh;
   overflow: hidden;
   background: $light-grayish-blue;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   display: grid;
-  // grid-template-columns: 1fr;
   grid-template-rows: 95% 5%;
   justify-content: center;
   align-items: center;
@@ -56,7 +51,7 @@ article {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 40% 45% 15%;
+  grid-template-rows: 40% 60%;
 
   .article-img {
     overflow: hidden;
@@ -80,13 +75,9 @@ article {
 
   .article-footer {
     display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // display: grid;
-    // grid-template-columns: 75% 20%;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    margin-top: 2rem;
 
     .credits {
       display: flex;
@@ -136,4 +127,8 @@ article {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+// Media Queries
+@media (min-width: 1440px) {
 }
