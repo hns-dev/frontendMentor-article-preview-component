@@ -131,4 +131,29 @@ article {
 
 // Media Queries
 @media (min-width: 1440px) {
+  .container {
+    max-width: 880px;
+    height: 300px;
+  }
+  article {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+
+    .article-img {
+      img {
+        height: 100%;
+      }
+    }
+
+    .article-body {
+      padding: 2.3rem;
+      h1 {
+        font-size: 21.5px;
+      }
+
+      .article-footer {
+        margin-top: 1.3rem;
+      }
+    }
+  }
 }

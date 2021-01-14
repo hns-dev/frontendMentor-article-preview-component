@@ -154,4 +154,29 @@ article .article-footer .share-icon {
 .attribution a {
   color: #3e52a3;
 }
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 880px;
+    height: 300px;
+  }
+  article {
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  article .article-img img {
+    height: 100%;
+  }
+  article .article-body {
+    padding: 2.3rem;
+  }
+  article .article-body h1 {
+    font-size: 21.5px;
+  }
+  article .article-body .article-footer {
+    margin-top: 1.3rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
