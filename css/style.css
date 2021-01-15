@@ -197,6 +197,10 @@ article .article-footer .credits .credits-text .date {
   fill: white;
 }
 
+.hide {
+  display: none;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -207,7 +211,7 @@ article .article-footer .credits .credits-text .date {
   color: #3e52a3;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 850px) {
   .container {
     max-width: 880px;
   }
