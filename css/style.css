@@ -47,7 +47,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
 }
 
 article {
@@ -55,10 +54,12 @@ article {
   display: grid;
   -ms-grid-rows: 223px auto;
       grid-template-rows: 223px auto;
+  position: relative;
 }
 
 article .article-img {
   overflow: hidden;
+  border-radius: 15px 15px 0 0;
 }
 
 article .article-img img {
@@ -126,7 +127,7 @@ article .article-footer .credits .credits-text .date {
   color: #9eafc2;
 }
 
-article .article-footer .share-icon {
+.share-icon {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -140,6 +141,60 @@ article .article-footer .share-icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.active-footer {
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.active-footer .tooltip {
+  background: #48556a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.2rem 2rem;
+}
+
+.active-footer .tooltip span {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #9eafc2;
+}
+
+.active-footer .tooltip .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.active-footer .tooltip .social img {
+  margin-left: 1rem;
+}
+
+.active-footer .tooltip .share-icon {
+  background: #6d7f97;
+}
+
+.active-footer .tooltip .share-icon .share {
+  fill: white;
 }
 
 .attribution {
@@ -162,6 +217,9 @@ article .article-footer .share-icon {
     -ms-grid-rows: 300px;
         grid-template-rows: 300px;
   }
+  article .article-img {
+    border-radius: 15px 0 0 15px;
+  }
   article .article-img img {
     height: 100%;
     -o-object-fit: cover;
@@ -175,6 +233,35 @@ article .article-footer .share-icon {
   }
   article .article-body .article-footer {
     margin-top: 1.5rem;
+  }
+  .active-footer {
+    position: absolute;
+    left: 76.3%;
+    bottom: 32%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    overflow: visible;
+  }
+  .active-footer .share-icon {
+    display: none;
+  }
+  .active-footer .tooltip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .active-footer .tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background: #48556a;
   }
 }
 /*# sourceMappingURL=style.css.map */
