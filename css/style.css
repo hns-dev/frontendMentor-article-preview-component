@@ -91,6 +91,8 @@ article .article-footer {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
 }
 
 article .article-footer .credits {
@@ -127,7 +129,7 @@ article .article-footer .credits .credits-text .date {
   color: #9eafc2;
 }
 
-.share-icon {
+.share-btn {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -141,9 +143,58 @@ article .article-footer .credits .credits-text .date {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.share-btn.active {
+  background: #6d7f97;
+}
+
+.share-btn.active .share-icon-path {
+  fill: white;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .active-footer {
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
   border-radius: 0 0 15px 15px;
   position: absolute;
   bottom: 0;
@@ -189,11 +240,11 @@ article .article-footer .credits .credits-text .date {
   margin-left: 1rem;
 }
 
-.active-footer .tooltip .share-icon {
+.active-footer .tooltip .share-btn {
   background: #6d7f97;
 }
 
-.active-footer .tooltip .share-icon .share {
+.active-footer .tooltip .share-btn .share-icon-path {
   fill: white;
 }
 
@@ -247,7 +298,7 @@ article .article-footer .credits .credits-text .date {
     width: fit-content;
     overflow: visible;
   }
-  .active-footer .share-icon {
+  .active-footer .share-btn {
     display: none;
   }
   .active-footer .tooltip {
