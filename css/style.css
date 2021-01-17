@@ -54,6 +54,9 @@ article {
   display: grid;
   -ms-grid-rows: 223px auto;
       grid-template-rows: 223px auto;
+  -webkit-box-shadow: 0px 3px 40px rgba(196, 223, 255, 0.3);
+          box-shadow: 0px 3px 40px rgba(196, 223, 255, 0.3);
+  border-radius: 15px;
   position: relative;
 }
 

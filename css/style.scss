@@ -51,6 +51,8 @@ article {
   display: grid;
   // grid-template-rows: 40% 60%;
   grid-template-rows: 223px auto;
+  box-shadow: 0px 3px 40px rgba(196, 223, 255, 0.3);
+  border-radius: 15px;
   position: relative;
 
   .article-img {
